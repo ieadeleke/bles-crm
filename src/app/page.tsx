@@ -1,103 +1,184 @@
-import Image from "next/image";
+import Link from "next/link";
+import { FaArrowRightLong } from "react-icons/fa6";
+import { IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowDown } from "react-icons/io";
+import Footer from "./footer";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="bg-[#FAFAFA]">
+      <div className="hero pt-32">
+        <div className="w-[50%] mx-auto">
+          <h1 className="text-black text-6xl text-center font-bold mb-3 leading-[1.2]">
+            Smarter CRM, Stronger Sustainable Sales.
+          </h1>
+          <p className="text-sm text-center leading-loose w-[80%] mx-auto text-black mb-6">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore
+            aliquam vero dignissimos quia minima sed aliquid natus quos
+            quibusdam inventore delectus ipsum consectetur, provident ab alias.
+            Possimus, est provident. Dolores?
+          </p>
+          <Link
+            href="/"
+            className="bg-black py-5 px-7 text-sm text-white rounded-full flex items-center w-max gap-2 mx-auto"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            Get Started
+            <FaArrowRightLong className="text-lg" />
+          </Link>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+      <section className="px-20 mt-24">
+        <div className="grid grid-cols-2 items-center gap-32">
+          <div>
+            <div className="flex items-center gap-2 mb-2">
+              <div className="size-2 bg-black rounded-full"></div>
+              <p className="text-sm text-black">Order Analysis</p>
+            </div>
+            <h3 className="text-4xl text-black leading-[1.3]">
+              Selling Digital <br /> Products is Easier
+            </h3>
+          </div>
+          <div>
+            <p className="text-sm leading-loose text-black mb-3">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit
+              optio officiis at iste quaerat praesentium quas totam perferendis
+              nisi qui culpa delectus inventore aperiam quam, voluptates ullam
+              accusamus explicabo voluptatem!
+            </p>
+            <Link
+              href="/"
+              className="bg-black py-4 px-7 text-sm text-white rounded-full flex items-center w-max gap-2"
+            >
+              Get Started
+              <FaArrowRightLong className="text-lg" />
+            </Link>
+          </div>
+        </div>
+        <div className="grid grid-cols-[1fr_1.3fr] gap-5 mt-10">
+          <div className="h-[24rem] rounded-[32px] bg-white border-2 border-solid border-[#ECECEC]"></div>
+          <div className="h-[24rem] rounded-[32px] bg-white border-2 border-solid border-[#ECECEC]"></div>
+        </div>
+      </section>
+      <div className="bg-black h-[50rem] mt-24"></div>
+      <section className="px-20 mt-24">
+        {/* <div className="rounded-[32px] bg-white px-32 py-20 border-2 border-solid border-[#ECECEC]"> */}
+        <div className="grid grid-cols-2 gap-16">
+          <div>
+            <div className="h-full rounded-[32px] bg-white border-2 border-solid border-[#ECECEC]"></div>
+          </div>
+          <div>
+            <div className="flex items-center gap-2 mb-3">
+              <div className="size-2 bg-black rounded-full"></div>
+              <p className="text-sm text-black">Order Analysis</p>
+            </div>
+            <h3 className="text-3xl text-black font-semibold leading-[1.5] mb-6 w-[80%]">
+              What can our CRM Sales do for you to help you out?
+            </h3>
+            <div className="flex gap-3 mb-5">
+              <div>
+                <div className="size-9 rounded-full bg-[#FEC27E]"></div>
+              </div>
+              <div>
+                <h4 className="text-lg text-black mb-2">
+                  Better Lead Management
+                </h4>
+                <p className="w-[80%] text-sm leading-loose text-black mb-4 opacity-70">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Impedit optio officiis at iste quaerat praesentium quas totam.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-3 mb-5">
+              <div>
+                <div className="size-9 rounded-full bg-[#FEC27E]"></div>
+              </div>
+              <div>
+                <h4 className="text-lg text-black mb-2">
+                  Better Lead Management
+                </h4>
+                <p className="w-[80%] text-sm leading-loose text-black mb-4 opacity-70">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Impedit optio officiis at iste quaerat praesentium quas totam.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-3 mb-4">
+              <div>
+                <div className="size-9 rounded-full bg-[#FEC27E]"></div>
+              </div>
+              <div>
+                <h4 className="text-lg text-black mb-2">
+                  Better Lead Management
+                </h4>
+                <p className="w-[80%] text-sm leading-loose text-black mb-4 opacity-70">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Impedit optio officiis at iste quaerat praesentium quas totam.
+                </p>
+              </div>
+            </div>
+            <Link
+              href="/"
+              className="bg-black py-5 px-7 text-sm text-white rounded-full flex items-center w-max gap-2"
+            >
+              Get Started
+              <FaArrowRightLong className="text-lg" />
+            </Link>
+          </div>
+        </div>
+      </section>
+      <section className="px-20 mt-24">
+        {/* <div className="rounded-[32px] bg-white px-32 py-20 border-2 border-solid border-[#ECECEC]"> */}
+        <div className="grid grid-cols-2 gap-16">
+          <div>
+            <h3 className="text-3xl text-black font-semibold leading-[1.5] mb-6 w-[80%]">
+              Frequently Asked <br /> Questions about Memento
+            </h3>
+            <Link
+              href="/"
+              className="bg-black py-5 px-7 text-sm text-white rounded-full flex items-center w-max gap-2"
+            >
+              Get Started
+              <FaArrowRightLong className="text-lg" />
+            </Link>
+          </div>
+          <div className="flex flex-col gap-4">
+            <div className="bg-white shadow-lg faq py-5 px-6">
+              <div className="faq__header flex items-center justify-between mb-4">
+                <h4 className="text-lg text-black">Who can open a Silento</h4>
+                <IoIosArrowUp className="text-black text-2xl" />
+              </div>
+              <div className="faq__body">
+                <p className="text-sm leading-loose text-black opacity-80">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+                  sed soluta voluptatem consequuntur quod! Ab, sit pariatur, eos
+                  aspernatur incidunt iusto cupiditate facere labore delectus
+                  quidem libero. Nulla, quod corrupti. Lorem ipsum dolor sit
+                  amet consectetur adipisicing elit. Vero sed soluta.
+                </p>
+              </div>
+            </div>
+            <div className="bg-white shadow-lg faq pt-6 pb-5 px-6">
+              <div className="faq__header flex items-center justify-between">
+                <h4 className="text-lg text-black">Who can open a Silento</h4>
+                <IoIosArrowDown className="text-black text-2xl" />
+              </div>
+            </div>
+            <div className="bg-white shadow-lg faq pt-6 pb-5 px-6">
+              <div className="faq__header flex items-center justify-between">
+                <h4 className="text-lg text-black">Who can open a Silento</h4>
+                <IoIosArrowDown className="text-black text-2xl" />
+              </div>
+            </div>
+            <div className="bg-white shadow-lg faq pt-6 pb-5 px-6">
+              <div className="faq__header flex items-center justify-between">
+                <h4 className="text-lg text-black">Who can open a Silento</h4>
+                <IoIosArrowDown className="text-black text-2xl" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Footer />
     </div>
   );
 }
